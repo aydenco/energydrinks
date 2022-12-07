@@ -20,7 +20,7 @@ def create_drink(current_user_token):
 
     print(f'BIG TESTER: {current_user_token}')
 
-    drink = drink(brand, flavor, caffeine, sugar, calories, user_token= user_token)
+    drink = Drink(brand, flavor, caffeine, sugar, calories, user_token= user_token)
 
     db.session.add(drink)
     db.session.commit()

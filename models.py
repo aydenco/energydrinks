@@ -48,13 +48,16 @@ class User(db.Model, UserMixin):
     def __repr__(self):
         return f'User {self.email} has been added to the database'
 
+# Once initiallized, how do i change valid string length?
+# Error I recieved : psycopg2.errors.StringDataRightTruncation: value too long for type character varying(4)
+
 class Drink(db.Model):
     id = db.Column(db.String, primary_key = True)
     brand = db.Column(db.String(50), nullable = False)
     flavor = db.Column(db.String(50))
-    caffeine = db.Column(db.String(4))
-    sugar = db.Column(db.String(4))
-    calories = db.Column(db.String(4))
+    caffeine = db.Column(db.String(10))
+    sugar = db.Column(db.String(10))
+    calories = db.Column(db.String(10))
     user_token = db.Column(db.String, db.ForeignKey('user.token'), nullable = False)
 
     def __init__(self, brand, flavor, caffeine, sugar, calories, user_token, id = ''):
