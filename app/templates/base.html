@@ -12,10 +12,10 @@
   <title>Favorite Energy Drinks</title>
 </head>
 
-<body style="background-color: #CFFDE1;">
-  <nav class="navbar navbar-expand-lg" style="background-color: #FED049;">
+<body style="background-color: #D0EFB5;">
+  <nav class="navbar navbar-expand-lg" style="background-color: #EB7878;">
     <div class="container-fluid">
-      <a class="navbar-brand" style="color: #3D5656;" href="{{ url_for('site.home') }}">Favorite Energy Drinks</a>
+      <a class="navbar-brand" style="color: #2F3E75;" href="{{ url_for('site.home') }}">Favorite Energy Drinks</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,21 +23,21 @@
       <div class="collapse navbar-collapse" id="navmenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item" >
-            <a href="{{ url_for('site.home') }}" class="nav-link" style="color: #3D5656;">Home</a>
+            <a href="{{ url_for('site.home') }}" class="nav-link" style="color: #2F3E75;">Home</a>
           </li>
           <li class="nav-item" >
-            <a href="{{ url_for('site.profile') }}" class="nav-link" style="color: #3D5656;">Profile</a>
+            <a href="{{ url_for('site.profile') }}" class="nav-link" style="color: #2F3E75;">Profile</a>
           </li>
           {% if current_user.is_authenticated %}
           <li class="nav-item" >
-            <a href="{{ url_for('auth.logout') }}" class="nav-link" style="color: #3D5656;">Logout</a>
+            <a href="{{ url_for('auth.logout') }}" class="nav-link" style="color: #2F3E75;">Logout</a>
           </li>
           {% else %}
           <li class="nav-item" >
-            <a href="{{ url_for('auth.signin') }}" class="nav-link" style="color: #3D5656;">Sign In</a>
+            <a href="{{ url_for('auth.signin') }}" class="nav-link" style="color: #2F3E75;">Sign In</a>
           </li>
           <li class="nav-item" >
-            <a href="{{ url_for('auth.signup') }}" class="nav-link" style="color: #3D5656;">Sign Up</a>
+            <a href="{{ url_for('auth.signup') }}" class="nav-link" style="color: #2F3E75;">Sign Up</a>
           </li>
           {% endif %}
         </ul>
